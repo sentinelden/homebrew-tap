@@ -45,9 +45,7 @@ key, and an attestation is not a certification of the app.
 macOS only, universal (Apple Silicon + Intel). The binary is signed with a
 Developer ID certificate and notarized by Apple.
 
-A Linux build is not published yet. If you need one for a Linux CI runner,
-say so at <https://sentinelden.com/contact?area=Sentinel%20Studio>, it moves
-up the queue on demand.
+A Linux x86_64 build is published as a GitHub Action: [sentinelden/sentinelctl-action](https://github.com/sentinelden/sentinelctl-action). It fetches a signed binary and verifies its SHA-256 before running. This Homebrew formula is the macOS universal build; both track the same version.
 
 ## Related
 
