@@ -33,7 +33,7 @@ can confirm it was not edited after the fact:
 
 ```bash
 sentinelctl audit ./MyApp.ipa --attest report.att.json
-sentinelctl verify-report report.att.json --artifact ./MyApp.ipa
+sentinelctl verify-report report.att.json --signer <auditor-pubkey> --artifact ./MyApp.ipa
 ```
 
 The signing key is generated per install on first use. It proves the report
