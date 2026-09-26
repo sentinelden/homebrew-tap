@@ -46,7 +46,7 @@ key, and an attestation is not a certification of the app.
 macOS 14 (Sonoma) or newer, universal (Apple Silicon + Intel). The binary is
 signed with a Developer ID certificate and notarized by Apple.
 
-A Linux x86_64 build is published as a GitHub Action: [sentinelden/sentinelctl-action](https://github.com/sentinelden/sentinelctl-action). It fetches the binary and checks its SHA-256 against both the published checksum and a digest committed in the Action before running it. The Linux build can trail this formula: it is on 1.6.0 while the macOS build is 1.7.0.
+A Linux x86_64 build is published as a GitHub Action: [sentinelden/sentinelctl-action](https://github.com/sentinelden/sentinelctl-action). It fetches the binary and checks its SHA-256 against both the published checksum and a digest committed in the Action before running it. Both builds are on 1.7.0; the Linux one is fully static, for x86_64 and arm64.
 
 ## Related
 
