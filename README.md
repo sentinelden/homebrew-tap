@@ -22,8 +22,9 @@ sentinelctl audit ./build/MyApp.ipa \
 ```
 
 Exit codes make it a build gate: `0` clean, `2` findings exceeded the
-threshold or the policy gate failed, `1` bad arguments, `3` internal error,
-`4` license verification failed.
+threshold or the policy gate failed, `1` bad arguments, `3` internal error.
+`verify-report` also exits `4` when no `--signer` was pinned, because the
+signature is then only self-asserted.
 
 ### Signed attestations
 
@@ -42,10 +43,10 @@ key, and an attestation is not a certification of the app.
 
 ## What this tap ships
 
-macOS only, universal (Apple Silicon + Intel). The binary is signed with a
-Developer ID certificate and notarized by Apple.
+macOS 14 (Sonoma) or newer, universal (Apple Silicon + Intel). The binary is
+signed with a Developer ID certificate and notarized by Apple.
 
-A Linux x86_64 build is published as a GitHub Action: [sentinelden/sentinelctl-action](https://github.com/sentinelden/sentinelctl-action). It fetches a signed binary and verifies its SHA-256 before running. This Homebrew formula is the macOS universal build; both track the same version.
+A Linux x86_64 build is published as a GitHub Action: [sentinelden/sentinelctl-action](https://github.com/sentinelden/sentinelctl-action). It fetches the binary and checks its SHA-256 against both the published checksum and a digest committed in the Action before running it. The Linux build can trail this formula: it is on 1.6.0 while the macOS build is 1.7.0.
 
 ## Related
 
