@@ -38,14 +38,19 @@ signature is then only self-asserted.
 
 ### Signed attestations
 
-`--attest` writes a signed record binding the target binary's SHA-256, the
-engine version, and a digest of the findings, so whoever receives a report
-can confirm it was not edited after the fact:
+`--attest` writes a signed record binding the audited file's SHA-256, the
+engine version, and a digest of the whole report (score, findings, fixes and
+MASVS/CWE tags), so whoever receives a report can confirm it was not edited
+after the fact:
 
 ```bash
-sentinelctl audit ./MyApp.ipa --attest report.att.json
-sentinelctl verify-report report.att.json --signer <auditor-pubkey> --artifact ./MyApp.ipa
+sentinelctl audit ./MyApp.ipa --json report.json --attest report.att.json
+sentinelctl verify-report report.att.json --signer <auditor-pubkey> --artifact ./MyApp.ipa --report report.json
 ```
+
+For an `.ipa` or `.apk` the hash is of the archive itself (from 1.10.1; earlier
+versions hashed the executable inside an `.ipa`). For an `.app` folder it is
+the executable inside it.
 
 The signing key is generated per install on first use. It proves the report
 came from that machine's copy of the engine. It is not a SentinelDen vendor
