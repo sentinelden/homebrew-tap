@@ -1,6 +1,16 @@
 # SentinelDen Homebrew tap
 
-Homebrew formulae for [SentinelDen](https://sentinelden.com) command-line tools.
+Homebrew formulae for [SentinelDen](https://sentinelden.com) command-line tools, and
+a cask for the SentinelDen Studio app.
+
+## SentinelDen Studio (app)
+
+```bash
+brew install --cask sentinelden/tap/sentinelden-studio
+```
+
+The notarized app for macOS 26 or later. It updates itself, so `brew upgrade` leaves
+it alone.
 
 ## sentinelctl
 
