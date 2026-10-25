@@ -1,9 +1,9 @@
 class Sentinelctl < Formula
   desc "Headless mobile app security audit CLI for iOS and Android binaries"
   homepage "https://sentinelden.com/audit"
-  url "https://sentinelden.com/audit/cli/sentinelctl-1.16.1.tar.gz"
-  sha256 "778846c89000a41c2b93c58c3f63533530af7d0164ea7541c2d037cc63925e4e"
-  version "1.16.1"
+  url "https://sentinelden.com/audit/cli/sentinelctl-1.17.0.tar.gz"
+  sha256 "c4a94c8487009c12b9010a894a22a279ddfeccc86a72b7901358e22096b29711"
+  version "1.17.0"
   license :cannot_represent
 
   # Universal (arm64 + x86_64), Developer ID signed and notarized.
@@ -12,6 +12,7 @@ class Sentinelctl < Formula
 
   def install
     bin.install "sentinelctl"
+    pkgshare.install "THIRD-PARTY-NOTICES.txt"
   end
 
   test do
