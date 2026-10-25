@@ -3,7 +3,6 @@ class Sentinelctl < Formula
   homepage "https://sentinelden.com/audit"
   url "https://sentinelden.com/audit/cli/sentinelctl-1.17.0.tar.gz"
   sha256 "c4a94c8487009c12b9010a894a22a279ddfeccc86a72b7901358e22096b29711"
-  version "1.17.0"
   license :cannot_represent
 
   # Universal (arm64 + x86_64), Developer ID signed and notarized.
