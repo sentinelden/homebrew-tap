@@ -2,8 +2,8 @@ class Machoscope < Formula
   desc "Inspect a Mach-O binary's hardening posture"
   homepage "https://github.com/sentinelden/machoscope"
   url "https://github.com/sentinelden/machoscope/releases/download/v0.1.1/machoscope-0.1.1-macos-universal.tar.gz"
-  sha256 "25699fa921910f35ecaef23284e10e053c9a8ff7716dfac312d430b96a9ae798"
   version "0.1.1"
+  sha256 "25699fa921910f35ecaef23284e10e053c9a8ff7716dfac312d430b96a9ae798"
   license "MIT"
 
   # Prebuilt universal binary (arm64 + x86_64), ad-hoc signed.
