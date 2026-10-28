@@ -1,12 +1,13 @@
 class XcprivacyLint < Formula
   desc "Validate iOS PrivacyInfo.xcprivacy against a binary's actual API surface"
   homepage "https://github.com/sentinelden/xcprivacy-lint"
-  url "https://github.com/sentinelden/xcprivacy-lint/releases/download/v0.3.0/xcprivacy-lint-0.3.0-macos-universal.tar.gz"
-  version "0.3.0"
-  sha256 "695c87f86342cda16e38a99cbfc31c7c7d0a3bd6cee041b5434aedf77a289e26"
+  url "https://github.com/sentinelden/xcprivacy-lint/releases/download/v0.3.1/xcprivacy-lint-0.3.1-macos-universal.tar.gz"
+  version "0.3.1"
+  sha256 "3048e073934e740c79799285a593e0ebf1a276fd5eac340aef70cc0b49b1035c"
   license "MIT"
 
-  # Prebuilt universal binary (arm64 + x86_64), ad-hoc signed.
+  # Prebuilt universal binary (arm64 + x86_64), signed with Developer ID
+  # Application: Junaid Khan (647SZ7Q47T) and notarized.
   #
   # Shipped prebuilt rather than built from source because Homebrew's build
   # sandbox has no network access, and a SwiftPM build has to resolve package
