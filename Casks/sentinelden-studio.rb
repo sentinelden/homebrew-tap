@@ -1,6 +1,6 @@
 cask "sentinelden-studio" do
-  version "1.19.0"
-  sha256 "e9a6d6dc6e727850dfcf9e1fb4ac773df1431ccdd024b538330cb8493cafd1d6"
+  version "1.20.0"
+  sha256 "0bad3c212fe2fd8ffc5b16506385c80146f60d90c5e398d4e5cee99a19d487d9"
 
   url "https://sentinelden.com/audit/download/SentinelDenStudio-#{version}.dmg"
   name "SentinelDen Studio"

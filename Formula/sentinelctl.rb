@@ -1,8 +1,8 @@
 class Sentinelctl < Formula
   desc "Headless mobile app security audit CLI for iOS and Android binaries"
   homepage "https://sentinelden.com/audit"
-  url "https://sentinelden.com/audit/cli/sentinelctl-1.19.0.tar.gz"
-  sha256 "b6603f83c4b0be8725c64064cd4c3a25d9fe161dc72a130d03575dab5de15f75"
+  url "https://sentinelden.com/audit/cli/sentinelctl-1.20.0.tar.gz"
+  sha256 "2bb856edd77bcad1536685c12aeae76afeb172414081e1d38f4ea581f6681ffc"
   license :cannot_represent
 
   # Universal (arm64 + x86_64), Developer ID signed and notarized.
